@@ -57,11 +57,12 @@ services:
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
+    user: root
     restart: always
     networks:
       - monitoring-internal-net
     ports:
       - 3000:3000
     volumes:
-      - ${PWD}/monitoring/grafana/data:/usr/lib/grafana
+      - ${PWD}/monitoring/grafana/data:/var/lib/grafana
     # - ${PWD}/monitoring/grafana/config:/etc/grafana
