@@ -1,0 +1,67 @@
+version: "3"
+networks:
+  monitoring-internal-net:
+    external: true
+services:
+  telegraf_agent:
+    image: telegraf:1.19-alpine
+    container_name: telegraf_monitor
+    networks:
+      - monitoring-internal-net
+    environment:
+      - HOST_ETC=/hostfs/etc
+      - HOST_PROC=/hostfs/proc
+      - HOST_SYS=/hostfs/sys
+      - HOST_VAR=/hostfs/var
+      - HOST_RUN=/hostfs/run
+      - HOST_MOUNT=/hostfs
+    volumes:
+      - /:/hostfs:ro
+      # - /var/run/docker.sock:/var/run/docker.sock
+      - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    expose:
+      # StatsD port
+      - 8125
+      - 8092/udp
+      - 8094/tcp
+  prom-pushgw:
+    image: prom/pushgateway
+    container_name: pushgw
+    ports:
+      - 9091:9091
+    expose:
+      - 9091
+    networks:
+      - monitoring-internal-net
+  influxdb:
+    image: influxdb:2.0.4
+    container_name: influxdb
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - INFLUXDB_ADMIN_ENABLED=${INFLUXDB_ADMIN_ENABLED}
+      - INFLUXDB_ADMIN_USER=${INFLUXDB_ADMIN_USER}
+      - INFLUXDB_ADMIN_PASSWORD=${INFLUXDB_ADMIN_PASSWORD}
+      - INFLUXDB_DB=${INFLUXDB_DB}
+      - INFLUXDB_HTTP_LOG_ENABLED=${INFLUXDB_HTTP_LOG_ENABLED}
+      - INFLUXDB_REPORTING_DISABLED=${INFLUXDB_REPORTING_DISABLED}
+      - INFLUXDB_USER=${INFLUXDB_USER}
+      - INFLUXDB_USER_PASSWORD=${INFLUXDB_USER_PASSWORD}
+    volumes:
+      - ${PWD}/monitoring/influxdb/data:/var/lib/influxdb2
+    networks:
+      - monitoring-internal-net
+    ports:
+      - 8086:8086
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: always
+    networks:
+      - monitoring-internal-net
+    ports:
+      - 3000:3000
+    volumes:
+      - ${PWD}/monitoring/grafana/data:/usr/lib/grafana
+    # - ${PWD}/monitoring/grafana/config:/etc/grafana
