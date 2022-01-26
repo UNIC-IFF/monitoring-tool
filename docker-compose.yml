@@ -24,15 +24,6 @@ services:
       - 8125
       - 8092/udp
       - 8094/tcp
-  prom-pushgw:
-    image: prom/pushgateway
-    container_name: pushgw
-    ports:
-      - 9091:9091
-    expose:
-      - 9091
-    networks:
-      - monitoring-internal-net
   influxdb:
     image: influxdb:2.0.4
     container_name: influxdb
