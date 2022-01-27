@@ -14,15 +14,15 @@ A **telegraf** agent is running inside a **machine** (e.g **Virtual Machine**) a
 
 Is an agent, collecting system data and be able to transfer them to other entities (in our case influxDB).
 
-### InfluxDb
+### InfluxDb :file_cabinet:
 
 Is a time series database for storage and retrieval of time series data in fields such as operations monitoring, application metrics, etc.
 
-### Grafana
+### Grafana :chart_with_upwards_trend:
 
 Is a multi-platform analytics and interactive visualization web application.
 
-## File `telegraf.conf`
+## File `telegraf.conf` :spiral_notepad:
 
 - Create `telegraf.conf` file and write your tags and parameters, take as an example the `telegraf-example.conf` in this **repo**.
 
@@ -30,11 +30,11 @@ Is a multi-platform analytics and interactive visualization web application.
 
 - `token`, `organization` and `bucket` will be created and generated inside influxDB, please follow this guide to find out how.
 
-## File `.env`
+## File `.env` :spiral_notepad:
 
 - Create `.env` file and set environment variables by using `.env-example` in this **repo**.
 
-## Start the tool
+## Start the tool :rocket:
 
 Use `docker-compose up -d` in order to start the tool.
 
@@ -78,7 +78,7 @@ You can do that by:
 
 ## General Architecture
 
-### Note/Reminder: 
+### Note/Reminder :warning: : 
 * Grafana and InfluxDb can be running on completely different machine than telegraf agent
 ```
  +--------------------------+                              +----------------------------+
