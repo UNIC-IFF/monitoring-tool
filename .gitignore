@@ -1,3 +1,4 @@
 telegraf.conf
 .env
 monitoring/
+README.md
