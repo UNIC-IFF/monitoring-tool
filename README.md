@@ -107,8 +107,9 @@ You can do that by:
 
 ## Running **telegraf agent** on different machine than Grafana and InfluxDB
 - Place `telegraf.conf` file in the machine you want to monitor its data. 
-- Add the influxDB `token` inside `telegraf.conf` for authentication as well as influxDb `url`.
-- Create a `docker-compose.yml` on the machine you want telegraf agent to run file and include same info as in `docker-compose.yml` in this repo
+- Add the influxDB `token` inside `telegraf.conf` for authentication. 
+- Add influxDb `url` inside `telegraf.cong`.
+- Create a `docker-compose.yml` on the machine you want telegraf agent to run file and include same info as in `docker-compose.yml` in this repo.
 - Run `docker-compose up -d` to run the telegraf agent.
 
 
