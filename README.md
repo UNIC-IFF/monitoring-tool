@@ -1,4 +1,4 @@
-# Monitoring Tool System
+# EBSI Node Monitoring Tool
 
 ## What's Included?
 
