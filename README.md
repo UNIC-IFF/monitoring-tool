@@ -71,7 +71,7 @@ You can do that by:
 
 - Navigate to **Settings** -> **Data Sources** -> **Add data source** -> **Influx DB**
 - Choose Query Language (For this example use Flux)
-- HTTP Url set Influxdb address (http://influxdb:8086) note: path is marked as influxdb because is running under a container in the same network as grafana and telegraf agent configured in docker-compose.yml
+- HTTP Url set Influxdb address (http://influxdb:8086) note for this example: path is marked as influxdb because is running under a container in the same network as grafana and telegraf agent configured in docker-compose.yml, this can be changed based on the url where influxDB is running
 - Disable all Auth
 - Under InfluxDB Details specify **Organization** as added on **InfluxDB** Initial Setup
 - Under InfluxDB Details specify **Token** (to be **configured** on **InfluxDB** as described above)
