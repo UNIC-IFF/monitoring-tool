@@ -4,7 +4,7 @@
 
 This repository includes: 
 * the needed scripts for the automatic deployment of a monitoring system 
-* (Consisted of a telegraf, influxDb and a grafana - in form of :whale: docker containers) 
+** (Consisted of a telegraf, influxDb and a grafana - in form of :whale: docker containers) 
 * along with custom exporters for the exposure of monitoring data towards the monitoring system.
 
 ## How it works? :gear:
