@@ -6,7 +6,7 @@ This repository includes the needed scripts for the automatic deployment of a mo
 
 ## File `telegraf.conf`
 
-- Create `telegraf.conf` file and write your tags and parameters, takse as an example the `telegraf-example.conf` in this **repo**.
+- Create `telegraf.conf` file and write your tags and parameters, take as an example the `telegraf-example.conf` in this **repo**.
 
 - You can also follow telegraf docs for more info about tags to be used in InfluxDb: https://docs.influxdata.com/telegraf/v1.21/administration/configuration/
 
@@ -19,6 +19,12 @@ This repository includes the needed scripts for the automatic deployment of a mo
 ## Start the tool
 
 Use `docker-compose up -d` in order to start the tool.
+
+You need to install docker to start this tool:
+
+- For windows: https://docs.docker.com/desktop/windows/install/
+- For linux/ubuntu: https://docs.docker.com/engine/install/ubuntu/
+- For mac: https://docs.docker.com/desktop/mac/install/
 
 ### Check if monitoring system is up and running
 
