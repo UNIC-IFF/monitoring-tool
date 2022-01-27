@@ -38,7 +38,7 @@ Is a multi-platform analytics and interactive visualization web application.
 
 Use `docker-compose up -d` in order to start the tool.
 
-You need to install docker to start this tool:
+You need to have docker installed to start this tool:
 
 - For windows: https://docs.docker.com/desktop/windows/install/
 - For linux/ubuntu: https://docs.docker.com/engine/install/ubuntu/
