@@ -4,6 +4,9 @@
 
 This repository includes the needed scripts for the automatic deployment of a monitoring system (Consisted of a telegraf, influxDb and a grafana - in form of docker containers) along with custom exporters for the exposure of monitoring data towards the monitoring system.
 
+## How it works?
+example
+
 ## File `telegraf.conf`
 
 - Create `telegraf.conf` file and write your tags and parameters, take as an example the `telegraf-example.conf` in this **repo**.
