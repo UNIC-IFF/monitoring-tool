@@ -44,3 +44,30 @@ You can do that by:
 2. Select **bucket** for both **Read** and **Write**.
 3. Copy token and paste it on telegraf.conf.
 4. run the command `docker-compose restart` to restart the tool.
+
+## General Architecture
+
+```
+    +--------------------------+                                        +---------------------------+
+    |                                 |< - - - - - - - - - - - - - - - - - |                                  |
+    |         Grafana           | - - - - - - - - - - - - - - - ->   |         InfluxDb            |
+    |                                 |                                        |                                   |
+    +--------------------------+                                       +----------------------------+
+                                                                                       ^
+                                                                                       |
+                                                         +- - - - - - - - - - - - -+
+                                                          | data
+                                          +---------------------------+
+                                           |                                 |
+                                           |          Telegraf          |
+                                           |                                 |
+                                          +---------------------------+
+                                                           ^
+                                                           | system data
+                                                           |
+                                          +---------------------------+
+                                          |                                  |
+                                          |           System           |
+                                          |                                  |
+                                         +----------------------------+
+```
