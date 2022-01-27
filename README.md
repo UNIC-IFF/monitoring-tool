@@ -5,16 +5,21 @@
 This repository includes the needed scripts for the automatic deployment of a monitoring system (Consisted of a telegraf, influxDb and a grafana - in form of docker containers) along with custom exporters for the exposure of monitoring data towards the monitoring system.
 
 ## How it works?
+
 A **telegraf** agent is running inside a **machine** (e.g **Virtual Machine**) as a **docker container** and it collects **data** such as performance etc, and it transfer them to **influxDB**, where influxdb is connected with a **grafana** and they interchange data, in order for **grafana** to display data in different ways (such as Graphs, Pies etc)
 
 ## Brief Description for each element
+
 ### Telegraf
+
 Is an agent collecting system data and be able to transfer them to other entities (in our case influxDB).
 
 ### InfluxDb
+
 Is a time series database for storage and retrieval of time series data in fields such as operations monitoring, application metrics, etc.
 
 ### Grafana
+
 Is a multi-platform analytics and interactive visualization web application.
 
 ## File `telegraf.conf`
@@ -41,9 +46,9 @@ You need to install docker to start this tool:
 
 ### Check if monitoring system is up and running
 
-1. Navigate to [http://<your-address>:8086] for InfluxDb.
-2. Navigate to [http://<your-address>:9091] for the Push Gateway.
-3. Navigate to [http://<your-address>:3000] for Grafana.
+1. Navigate to [http://<ip-address>:8086]() for InfluxDb.
+2. Navigate to [http://<ip-address>:9091]() for the Push Gateway.
+3. Navigate to [http://<ip-address>:3000]() for Grafana.
 
 ### InfluxDB Initial Setup
 
@@ -57,17 +62,19 @@ You can do that by:
 2. Select **bucket** for both **Read** and **Write**.
 3. Copy token and paste it on telegraf.conf.
 4. run the command `docker-compose restart` to restart the tool.
- 
+
 ### Grafana Initial Setup
+
 #### After loging in with initial credentials (username: admin, pass: admin) InfluxDB needs to be added as Data Source
-* Navigate to **Settings** -> **Data Sources** -> **Add data source** -> **Influx DB**
-* Choose Query Language (For this example use Flux)
-* HTTP Url set Influxdb address (http://influxdb:8086) note: path is marked as influxdb because is running under a container in the same network as grafana and telegraf agent configured in docker-compose.yml
-* Disable all Auth
-* Under InfluxDB Details specify **Organization** as added on **InfluxDB** Initial Setup
-* Under InfluxDB Details specify **Token** (to be **configured** on **InfluxDB** as described above)
-* Under InfluxDB Details specify **Bucket** as added on **InfluxDB** Initial Setup
-* Save & test
+
+- Navigate to **Settings** -> **Data Sources** -> **Add data source** -> **Influx DB**
+- Choose Query Language (For this example use Flux)
+- HTTP Url set Influxdb address (http://influxdb:8086) note: path is marked as influxdb because is running under a container in the same network as grafana and telegraf agent configured in docker-compose.yml
+- Disable all Auth
+- Under InfluxDB Details specify **Organization** as added on **InfluxDB** Initial Setup
+- Under InfluxDB Details specify **Token** (to be **configured** on **InfluxDB** as described above)
+- Under InfluxDB Details specify **Bucket** as added on **InfluxDB** Initial Setup
+- Save & test
 
 ## General Architecture
 
@@ -85,7 +92,7 @@ You can do that by:
                     +--------------------------------------------+
                     |                Host Machine                |
                     |        +---------------------------+       |
-                    |        |                           |       | 
+                    |        |                           |       |
                     |        |      Telegraf Agent       |       |
                     |        |                           |       |
                     |        +---------------------------+       |
@@ -95,11 +102,14 @@ You can do that by:
                     |            +--------+                      |
                     +--------------------------------------------+
 ```
+
 ## Acknowledgement
-* This project is funded by European Blockchain Services Infrastructure (EBSI).
-* This repository is based on [https://github.com/evnsio/prom-stack](https://github.com/evnsio/prom-stack).
- 
- ## Contributors
-* Elias Iosif (iosife@unic.ac.cy)
-* Klitos Christodoulou (christodoulou.kl@unic.ac.cy)
-* Christos Michael (michael.christos@unic.ac.cy)
+
+- This project is funded by European Blockchain Services Infrastructure (EBSI).
+- This repository is based on [https://github.com/evnsio/prom-stack](https://github.com/evnsio/prom-stack).
+
+## Contributors
+
+- Elias Iosif (iosife@unic.ac.cy)
+- Klitos Christodoulou (christodoulou.kl@unic.ac.cy)
+- Christos Michael (michael.christos@unic.ac.cy)
