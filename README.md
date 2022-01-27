@@ -28,9 +28,9 @@ You need to install docker to start this tool:
 
 ### Check if monitoring system is up and running
 
-1. Navigate to [http://<ip-address>:8086] for InfluxDb.
-2. Navigate to [http://<ip-address>:9091] for the Push Gateway.
-3. Navigate to [http://<ip-address>:3000] for Grafana.
+1. Navigate to [http://<yourip-address>:8086] for InfluxDb.
+2. Navigate to [http://<yourip-address>:9091] for the Push Gateway.
+3. Navigate to [http://<yourip-address>:3000] for Grafana.
 
 ### InfluxDB First Setup
 
