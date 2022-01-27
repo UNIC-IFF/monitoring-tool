@@ -6,7 +6,7 @@ This repository includes the needed scripts for the automatic deployment of a mo
 
 ## How it works? :gear:
 
-A **telegraf** agent is running inside a **machine** (e.g **Virtual Machine**) as a **:whale: docker container** and it collects **data** such as performance etc, and it transfer them to **influxDB**, where influxdb is connected with a **grafana** and they interchange data, in order for **grafana** to display data in different ways (such as Graphs, Pies etc)
+A **telegraf** agent is running inside a **machine** (e.g **Virtual Machine**) as a **:whale: docker container** and it collects **data** such as performance etc, and it transfer them to **influxDB**, where influxdb is connected with a **grafana** and they interchange information, in order for **grafana** to display machine monitoring data in different ways (such as Graphs, Pies, Timeseries graphs etc)
 
 ## Brief Description for each element
 
