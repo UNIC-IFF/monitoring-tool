@@ -4,7 +4,7 @@
 
 This repository includes the needed scripts for the automatic deployment of a monitoring system (Consisted of a telegraf, influxDb and a grafana - in form of docker containers) along with custom exporters for the exposure of monitoring data towards the monitoring system.
 
-## How it works?
+## How it works? :gear:
 
 A **telegraf** agent is running inside a **machine** (e.g **Virtual Machine**) as a **docker container** and it collects **data** such as performance etc, and it transfer them to **influxDB**, where influxdb is connected with a **grafana** and they interchange data, in order for **grafana** to display data in different ways (such as Graphs, Pies etc)
 
