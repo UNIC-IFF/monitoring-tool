@@ -78,6 +78,8 @@ You can do that by:
 
 ## General Architecture
 
+### Note/Reminder: 
+* Grafana and InfluxDb can be running on completely different machine than telegraf agent
 ```
  +--------------------------+                              +----------------------------+
  |                          |                              |                            |
