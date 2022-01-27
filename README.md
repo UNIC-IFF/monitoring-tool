@@ -2,11 +2,11 @@
 
 ## What's Included?
 
-This repository includes the needed scripts for the automatic deployment of a monitoring system (Consisted of a telegraf, influxDb and a grafana - in form of docker containers) along with custom exporters for the exposure of monitoring data towards the monitoring system.
+This repository includes the needed scripts for the automatic deployment of a monitoring system (Consisted of a telegraf, influxDb and a grafana - in form of :whale: docker containers) along with custom exporters for the exposure of monitoring data towards the monitoring system.
 
 ## How it works? :gear:
 
-A **telegraf** agent is running inside a **machine** (e.g **Virtual Machine**) as a **docker container** and it collects **data** such as performance etc, and it transfer them to **influxDB**, where influxdb is connected with a **grafana** and they interchange data, in order for **grafana** to display data in different ways (such as Graphs, Pies etc)
+A **telegraf** agent is running inside a **machine** (e.g **Virtual Machine**) as a **:whale: docker container** and it collects **data** such as performance etc, and it transfer them to **influxDB**, where influxdb is connected with a **grafana** and they interchange data, in order for **grafana** to display data in different ways (such as Graphs, Pies etc)
 
 ## Brief Description for each element
 
@@ -38,7 +38,7 @@ Is a multi-platform analytics and interactive visualization web application.
 
 Use `docker-compose up -d` in order to start the tool.
 
-You need to have docker installed to start this tool:
+You need to have :whale: docker installed to start this tool :whale: :
 
 - For windows: https://docs.docker.com/desktop/windows/install/
 - For linux/ubuntu: https://docs.docker.com/engine/install/ubuntu/
