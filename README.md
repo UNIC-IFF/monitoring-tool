@@ -49,7 +49,7 @@ You need to install docker to start this tool:
 
 Among other fileds you will be asked to set `organization` name as well as `bucket` name, those two will be used in `telegraf.conf` file.
 
-Next step is to generate a `token` in order for telegraf to be able to send data to influxDB.
+Next step is to generate a `token` in order for **telegraf** and **grafana** to be able to send or receive data to/from influxDB.
 
 You can do that by:
 
