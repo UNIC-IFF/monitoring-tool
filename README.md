@@ -12,7 +12,7 @@ A **telegraf** agent is running inside a **machine** (e.g **Virtual Machine**) a
 
 ### Telegraf
 
-Is an agent collecting system data and be able to transfer them to other entities (in our case influxDB).
+Is an agent, collecting system data and be able to transfer them to other entities (in our case influxDB).
 
 ### InfluxDb
 
@@ -82,7 +82,7 @@ You can do that by:
  +--------------------------+                              +----------------------------+
  |                          |                              |                            |
  |         Grafana          |   monitoring data            |         InfluxDb           |
- |                          |<- - - - - - - - - - - - - - >|                            |
+ |   (data visualization)   |<- - - - - - - - - - - - - - >|                            |
  +--------------------------+                              +----------------------------+
                                                                     ^
                                                                     |
