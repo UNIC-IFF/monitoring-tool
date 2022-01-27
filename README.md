@@ -84,3 +84,11 @@ You can do that by:
                     |            +--------+                      |
                     +--------------------------------------------+
 ```
+## Acknowledgement
+This project is funded by European Blockchain Services Infrastructure (EBSI).
+This repository is based on [https://github.com/evnsio/prom-stack](https://github.com/evnsio/prom-stack).
+ 
+ ## Contributors
+* Elias Iosif (iosife@unic.ac.cy)
+* Klitos Christodoulou (christodoulou.kl@unic.ac.cy)
+* Christos Michael (michael.christos@unic.ac.cy)
