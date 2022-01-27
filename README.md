@@ -45,7 +45,7 @@ You need to install docker to start this tool:
 2. Navigate to [http://<your-address>:9091] for the Push Gateway.
 3. Navigate to [http://<your-address>:3000] for Grafana.
 
-### InfluxDB First Setup
+### InfluxDB Initial Setup
 
 Among other fileds you will be asked to set `organization` name as well as `bucket` name, those two will be used in `telegraf.conf` file.
 
@@ -57,6 +57,17 @@ You can do that by:
 2. Select **bucket** for both **Read** and **Write**.
 3. Copy token and paste it on telegraf.conf.
 4. run the command `docker-compose restart` to restart the tool.
+ 
+### Grafana Initial Setup
+#### After loging in with initial credentials (username: admin, pass: admin) InfluxDB needs to be added as Data Source
+* Navigate to **Settings** -> **Data Sources** -> **Add data source** -> **Influx DB**
+* Choose Query Language (For this example use Flux)
+* HTTP Url set Influxdb address (http://influxdb:8086) note: path is marked as influxdb because is running under a container in the same network as grafana and telegraf agent configured in docker-compose.yml
+* Disable all Auth
+* Under InfluxDB Details specify **Organization** as added on **InfluxDB**
+* Under InfluxDB Details specify **Token** (to be **configured** on **InfluxDB** as described above)
+* Under InfluxDB Details specify **Bucket** as added on **InfluxDB**
+* Save & test
 
 ## General Architecture
 
