@@ -64,9 +64,9 @@ You can do that by:
 * Choose Query Language (For this example use Flux)
 * HTTP Url set Influxdb address (http://influxdb:8086) note: path is marked as influxdb because is running under a container in the same network as grafana and telegraf agent configured in docker-compose.yml
 * Disable all Auth
-* Under InfluxDB Details specify **Organization** as added on **InfluxDB**
+* Under InfluxDB Details specify **Organization** as added on **InfluxDB** Initial Setup
 * Under InfluxDB Details specify **Token** (to be **configured** on **InfluxDB** as described above)
-* Under InfluxDB Details specify **Bucket** as added on **InfluxDB**
+* Under InfluxDB Details specify **Bucket** as added on **InfluxDB** Initial Setup
 * Save & test
 
 ## General Architecture
