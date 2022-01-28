@@ -122,6 +122,6 @@ You can do that by:
 
 ## Contributors
 
-- Elias Iosif (iosife@unic.ac.cy)
 - Klitos Christodoulou (christodoulou.kl@unic.ac.cy)
+- Elias Iosif (iosife@unic.ac.cy)
 - Christos Michael (michael.christos@unic.ac.cy)
